@@ -109,3 +109,10 @@ export const testimonies = [
     test: "The image editing tools are incredible! Background removal and object removal work flawlessly. I've saved hundreds of hours on photo editing for my e-commerce business.",
   },
 ];
+
+export const footerLinks = [
+  { name: "Home", link: "/" },
+  { name: "About us", link: "/" },
+  { name: "Contact Us", link: "/" },
+  { name: "Privacy Policy", link: "/" },
+];

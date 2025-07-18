@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
+import { footerLinks } from "../constants";
 
 const Footer = () => {
-  const links = [
-    { name: "Home", link: "/" },
-    { name: "About us", link: "/" },
-    { name: "Contact Us", link: "/" },
-    { name: "Privacy Policy", link: "/" },
-  ];
 
   return (
     <footer className="my-10 pt-10 w-full px-5 lg:px-0 lg:max-w-[80%] mx-auto">
@@ -27,7 +22,7 @@ const Footer = () => {
           <div className="flex flex-col gap-6">
             <h3 className="font-semibold">Company</h3>
             <div className="flex flex-col gap-3 text-midnight-600 lg:text-xs">
-              {links.map((link) => (
+              {footerLinks.map((link) => (
                 <Link
                   title={`Go to ${link.name} page`}
                   key={link.name}
