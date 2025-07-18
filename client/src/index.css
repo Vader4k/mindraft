@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap");
+@import "tailwindcss";
+
+/* Override Tailwind's default sans font stack */
+:root {
+  --tw-font-sans: "Inter", "Poppins", "Space Grotesk",
+    sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+.font-space-grotesk {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+
+@theme {
+  --color-midnight-50: #F8FAFC;
+  --color-midnight-100: #F1F5F9;
+  --color-midnight-200: #E2E8F0;
+  --color-midnight-300: #CBD5E1;
+  --color-midnight-400: #94A3B8;
+  --color-midnight-500: #64748B;
+  --color-midnight-600: #475569;
+  --color-midnight-700: #334155;
+  --color-midnight-800: #1E293B;
+  --color-midnight-900: #0F172A;
+  --color-midnight: #0F172A;
+
+  --color-blue-50: #EFF6FF;
+  --color-blue-100: #DBEAFE;
+  --color-blue-200: #BFDBFE;
+  --color-blue-300: #93C5FD;
+  --color-blue-400: #60A5FA;
+  --color-blue-500: #3B82F6;
+  --color-blue-600: #2563EB;
+  --color-blue-700: #1D4ED8;
+  --color-blue-800: #1E40AF;
+  --color-blue-900: #1E3A8A;
+  --color-blue: #2563EB;
+}
+
+@layer components {
+  button {
+    @apply cursor-pointer
+  }
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .animate-slider {
+    animation: slider 1s linear infinite;
+  }
+}
