@@ -134,7 +134,7 @@ const Overview = () => {
               </div>
             </Link>
             <Link
-              to={"/dashboard/article"}
+              to={"/dashboard/generate-images"}
               className="p-3 hover:bg-blue-50/50 transition-all w-full flex items-center gap-5 border border-midnight-200 rounded-lg"
             >
               <div className="size-[40px] text-lg flex items-center justify-center bg-gradient-to-b from-blue-600 to-blue-400 text-white rounded-lg">
