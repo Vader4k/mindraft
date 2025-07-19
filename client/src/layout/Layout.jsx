@@ -14,9 +14,9 @@ const Layout = () => {
   }
 
   return (
-    <div className="flex items-start h-screen">
+    <div className="flex items-start min-h-screen">
       <Sidebar />
-      <div className="py-10 px-6 min-h-screen w-full bg-blue-50/50">
+      <div className="py-10 px-6 min-h-screen h-full w-full bg-blue-50/50">
         <Outlet />
       </div>
     </div>

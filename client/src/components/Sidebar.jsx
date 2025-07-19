@@ -10,7 +10,7 @@ const Sidebar = () => {
   const location = useLocation();
   const active = "bg-blue-50 font-medium";
   const { user } = useUser();
-  const {signOut} = useClerk();
+  const { signOut } = useClerk();
 
   return (
     <aside className="h-screen flex flex-col sticky top-0 w-[280px] bg-white border-r border-midnight-200 pt-3">
@@ -84,8 +84,9 @@ const Sidebar = () => {
               src={user?.imageUrl}
               alt="profile pic"
             />
-
-            <span>{user?.fullName}</span>
+            <span className="font-inter text-sm capitalize text-midnight-600">
+              {user?.fullName}
+            </span>
           </div>
           <button onClick={signOut}>
             <AiOutlineLogout />
