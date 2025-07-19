@@ -1,8 +1,10 @@
 import { SlMagicWand } from "react-icons/sl";
 import { GiMagickTrick } from "react-icons/gi";
 import { IoPlayOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section className="h-[80vh] flex flex-col items-center justify-center w-full relative">
       <div className="absolute w-full h-[110vh] inset-0 -top-20 opacity-15 bg-[radial-gradient(circle_at_50%_50%,_#B3E5FC,_#81D4FA,_#ADD8E6,_#FFFFFF,_#FFFFFF)]" />
@@ -23,7 +25,10 @@ const Hero = () => {
           perfect your content in seconds.
         </p>
         <div className="w-full text-xs md:text-base justify-center flex items-start gap-5">
-          <button className="flex items-center gap-3 font-semibold py-3 px-6 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-300 rounded-md text-white">
+          <button
+            onClick={() => navigate("/dashboard")}
+            className="flex items-center gap-3 font-semibold py-3 px-6 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-300 rounded-md text-white"
+          >
             Start Creating Now
             <GiMagickTrick />
           </button>

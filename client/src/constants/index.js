@@ -46,31 +46,37 @@ export const features = [
     icon: BsFileEarmarkRichtext,
     title: "Article generator",
     text: "Generate high-quality, engaging articles on any topic with AI assistance.",
+    path: "/dashboard/article",
   },
   {
     icon: LuPencilLine,
     title: "Blog title creator",
     text: "Create catchy, SEO-optimized blog titles that drives clicks and user engagements",
+    path: "/dashboard/blog",
   },
   {
     icon: BsCardImage,
     title: "AI image generator",
     text: "create stunning, unique umages from text descriptions using advanced AI models",
+    path: "/dashboard/generate-images",
   },
   {
     icon: PiScissorsLight,
     title: "Background removal",
     text: "Remove backgrounds from images instantly with precision AI technology",
+    path: "/dashboard/background-removal",
   },
   {
     icon: LuPenTool,
     title: "Object Removal",
     text: "Remove unwanted Objects from photo seamlessly with intelligent AI editing technology",
+    path: "/dashboard/object-removal",
   },
   {
     icon: PiCertificateLight,
     title: "Resume Reviewer",
     text: "Get AI-powered feedback and suggestions to improve your resume and land your dream job",
+    path: "/dashboard/resume-review",
   },
 ];
 
@@ -116,3 +122,36 @@ export const footerLinks = [
   { name: "Contact Us", link: "/" },
   { name: "Privacy Policy", link: "/" },
 ];
+
+export const sidebarLinks = [
+  {
+    name: 'Article Generator',
+    url: "/dashboard/article",
+    icon: BsFileEarmarkRichtext
+  },
+  {
+    name: "Blog Title Creator",
+    url: "/dashboard/blog",
+    icon: LuPencilLine
+  },
+  {
+    name: "Image Generator",
+    url: '/dashboard/generate-images',
+    icon: BsCardImage
+  },
+  {
+    name: "Background Removal",
+    url: "/dashboard/background-removal",
+    icon: PiScissorsLight
+  },
+  {
+    name: "Object Removal",
+    url: "/dashboard/object-removal",
+    icon: LuPenTool
+  },
+  {
+    name: "Resume Reviewer",
+    url: "/dashboard/resume-review",
+    icon: PiCertificateLight
+  }
+]

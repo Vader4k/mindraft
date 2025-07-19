@@ -1,7 +1,12 @@
 import { navLinks } from "../constants";
 import { Link } from "react-router-dom";
+import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
 
 const Navbar = () => {
+  const { user } = useUser();
+
+  const { openSignIn } = useClerk();
+
   return (
     <header className="bg-transparent sticky top-0 z-20 backdrop-blur-sm">
       <nav className="w-full py-3 bg-transparent px-3 md:max-w-[86%] mx-auto flex items-center justify-between">
@@ -23,10 +28,18 @@ const Navbar = () => {
           ))}
         </div>
         {/* dahboard */}
+
         <div className="flex-1 flex justify-end">
-          <button className="text-sm px-10 py-2 rounded-full bg-gradient-to-r from-blue-700 via-blue-500 to-blue-200 text-white">
-            Get Started
-          </button>
+          {user ? (
+            <UserButton />
+          ) : (
+            <button
+              onClick={openSignIn}
+              className="text-sm px-10 py-2 rounded-full bg-gradient-to-r from-blue-700 via-blue-500 to-blue-200 text-white"
+            >
+              Get Started
+            </button>
+          )}
         </div>
       </nav>
     </header>
