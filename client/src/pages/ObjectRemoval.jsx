@@ -11,7 +11,7 @@ const ObjectRemoval = () => {
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
-    if (file && file.type.startsWith("image/")) {
+    if (file && file.type === 'application/pdf') {
       setImage(file);
       console.log("Uploaded image:", file.name);
     } else {
@@ -47,7 +47,7 @@ const ObjectRemoval = () => {
                   name="image"
                   id="image"
                   type="file"
-                  accept="image/*"
+                  accept="application/pdf"
                   onChange={handleFileChange}
                   required
                   className="hidden"
