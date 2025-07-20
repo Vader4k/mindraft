@@ -22,10 +22,10 @@ const Sidebar = () => {
         </Link>
       </div>
       <div className="px-3 py-5 flex flex-col">
-        <span className="font-space-grotesk text-xs font-medium">
+        <span className="font-space-grotesk text-xs font-medium px-3">
           Dashboard
         </span>
-        <div className="mt-3">
+        <div className="mt-1">
           <Link
             to={"/dashboard"}
             className={`${
@@ -38,7 +38,7 @@ const Sidebar = () => {
 
         {/* tools */}
         <div className="mt-10 flex flex-col gap-2">
-          <span className="text-xs font-medium font-space-grotesk">
+          <span className="text-xs font-medium font-space-grotesk px-3">
             AI Tools
           </span>
           {sidebarLinks.map((link) => {
@@ -60,10 +60,10 @@ const Sidebar = () => {
 
         {/* setings */}
         <div className="mt-10">
-          <span className="font-space-grotesk text-xs font-medium">
+          <span className="font-space-grotesk text-xs font-medium px-3">
             Account
           </span>
-          <div className="mt-3">
+          <div className="mt-1">
             <Link
               to={"/dashboard/settings"}
               className={`${
