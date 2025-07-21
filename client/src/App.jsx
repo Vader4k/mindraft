@@ -9,12 +9,16 @@ import RemoveBackground from "./pages/RemoveBackground";
 import ResumeReviewer from "./pages/ResumeReviewer";
 import Overview from "./pages/Overview";
 import Settings from "./pages/Settings";
+import SignInPage from "./pages/SignIn";
+import SignUpPage from "./pages/signUp";
 
 const App = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/sign-in" element={<SignInPage />} />
+        <Route path="/sign-up" element={<SignUpPage />} />
         <Route path="/dashboard" element={<Layout />}>
           <Route index element={<Overview />} />
           <Route path="article" element={<Article />} />

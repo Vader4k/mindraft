@@ -1,14 +1,16 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
-import { useUser, SignIn } from "@clerk/clerk-react";
+import { SignIn, useUser } from "@clerk/clerk-react";
 
 const Layout = () => {
   const { user } = useUser();
 
+  console.log(user)
+
   if (!user) {
     return (
       <div className="flex items-center justify-center w-full h-screen">
-        <SignIn />
+        <SignIn  routing="path" path="/sign-in"/>
       </div>
     );
   }

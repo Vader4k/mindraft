@@ -1,11 +1,9 @@
 import { navLinks } from "../constants";
 import { Link } from "react-router-dom";
-import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
+import { UserButton, useUser } from "@clerk/clerk-react";
 
 const Navbar = () => {
   const { user } = useUser();
-
-  const { openSignIn } = useClerk();
 
   return (
     <header className="bg-transparent sticky top-0 z-20 backdrop-blur-sm">
@@ -33,12 +31,12 @@ const Navbar = () => {
           {user ? (
             <UserButton />
           ) : (
-            <button
-              onClick={openSignIn}
+            <Link
+              to={'/sign-in'}
               className="text-sm px-10 py-2 rounded-full bg-gradient-to-r from-blue-700 via-blue-500 to-blue-200 text-white"
             >
               Get Started
-            </button>
+            </Link>
           )}
         </div>
       </nav>
