@@ -11,14 +11,23 @@ import Overview from "./pages/Overview";
 import Settings from "./pages/Settings";
 import SignInPage from "./pages/SignIn";
 import SignUpPage from "./pages/signUp";
+import { AuthenticateWithRedirectCallback } from "@clerk/clerk-react";
 
 const App = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/sign-in" element={<SignInPage />} />
-        <Route path="/sign-up" element={<SignUpPage />} />
+        <Route path="/sign-in/*" element={<SignInPage />} />
+        <Route path="/sign-up/*" element={<SignUpPage />} />
+        <Route
+          path="/sign-in/sso-callback"
+          element={<AuthenticateWithRedirectCallback />}
+        />
+        <Route
+          path="/sign-up/sso-callback"
+          element={<AuthenticateWithRedirectCallback />}
+        />
         <Route path="/dashboard" element={<Layout />}>
           <Route index element={<Overview />} />
           <Route path="article" element={<Article />} />
