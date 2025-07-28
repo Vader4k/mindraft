@@ -14,8 +14,12 @@ const Slider = () => {
                     key={data.big + indx}
                     className="flex flex-col items-center text-center gap-2"
                   >
-                    <h3 className="text-3xl font-semibold font-inter text-blue-400 tracking-tight">{data.big}</h3>
-                    <p className="text-sm text-midnight font-space-grotesk">{data.small}</p>
+                    <h3 className="text-3xl font-semibold font-inter text-blue-400 tracking-tight">
+                      {data.big}
+                    </h3>
+                    <p className="text-sm text-midnight font-space-grotesk">
+                      {data.small}
+                    </p>
                   </div>
                 ))}
               </Fragment>
